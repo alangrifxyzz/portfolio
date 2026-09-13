@@ -17,3 +17,8 @@ collections:
       - { label: "Tanggal Proyek", name: "date", widget: "datetime" }
       - { label: "Gambar Proyek", name: "image", widget: "image" }
       - { label: "Deskripsi", name: "body", widget: "markdown" }
+
+backend:
+  name: git-gateway
+  site_domain: effulgent-elf-ebd3ec.netlify.app # Tambahkan baris ini
+  branch: main
