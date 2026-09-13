@@ -1,0 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main # Ubah ke 'master' jika branch utama GitHub kamu bernamanya master
+
+media_folder: "assets/img" # Folder tempat gambar proyek disimpan
+public_folder: "/assets/img"
+
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "_projects" # Data proyek akan disimpan sebagai file .md di folder ini
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Judul Proyek", name: "title", widget: "string" }
+      - { label: "Kategori / Role", name: "category", widget: "string" }
+      - { label: "Tanggal Proyek", name: "date", widget: "datetime" }
+      - { label: "Gambar Proyek", name: "image", widget: "image" }
+      - { label: "Deskripsi", name: "body", widget: "markdown" }
